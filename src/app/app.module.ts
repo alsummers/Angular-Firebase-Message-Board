@@ -16,6 +16,8 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './services/auth.guard';
 import { CreateComponent } from './create/create.component';
 import { MessageService } from './services/message.service';
+import { EditComponent } from './edit/edit.component';
+import { ReversePipe } from './reverse.pipe';
 
 const routes: Routes = [
   {
@@ -35,6 +37,11 @@ const routes: Routes = [
     component: CreateComponent,
     canActivate: [AuthGuard]
 
+  },
+  {
+    path: 'edit',
+    component: EditComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: '**', redirectTo: '/'
@@ -57,7 +64,9 @@ const firebaseConfig = {
     HomeComponent,
     RegisterComponent,
     LoginComponent,
-    CreateComponent
+    CreateComponent,
+    EditComponent,
+    ReversePipe
   ],
   imports: [
     BrowserModule,

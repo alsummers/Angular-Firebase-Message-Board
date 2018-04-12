@@ -1,0 +1,11 @@
+#footer-content {
+    border-radius: 0px;
+    position: fixed;
+    width: 100vw;
+    bottom: 0rem;
+    text-align: center;
+}
+
+.white-text {
+    margin-bottom: 0;
+}
